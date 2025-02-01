@@ -95,8 +95,8 @@ public class GiftChestStorage {
     private final Set<UUID> setGiftChestMode = new HashSet<>();
     private final Set<UUID> editGiftChestMode = new HashSet<>();
 
-    private File mainFolder;       // plugins/GiftChestPlugin
-    private File giftChestsFile;   // plugins/GiftChestPlugin/GiftChests.yml
+    private File mainFolder;
+    private File giftChestsFile;
 
     public GiftChestStorage(Plugin plugin) {
         this.plugin = plugin;
