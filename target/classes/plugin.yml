@@ -1,0 +1,11 @@
+name: FTSGiftchest
+version: '1.0-SNAPSHOT'
+main: com.ftscraft.ftsgiftchest.ftsgiftchest.FTSGiftchest
+api-version: '1.21'
+author: Melleming
+commands:
+  giftchest:
+    description: Erstellung von GiftChests
+    usage: /giftchest [edit]
+    permission: giftchest.use
+    permission-message: Du hast keine Berechtigung für diesen Befehl!
