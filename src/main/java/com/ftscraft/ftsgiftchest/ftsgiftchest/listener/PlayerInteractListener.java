@@ -88,17 +88,25 @@ public class PlayerInteractListener implements Listener {
     @EventHandler
     public void onBlockBreak(BlockBreakEvent event) {
         Player player = event.getPlayer();
+        Block block = event.getBlock();
+
+        if(!storage.isGiftChest(block.getLocation())) {
+            return;
+        }
+
         if (!player.hasPermission("giftchest.use")) {
             player.sendMessage(ChatColor.RED + "Dafür hast du keine Berechtigung!");
             event.setCancelled(true);
             return;
         }
-        Block block = event.getBlock();
-        if (storage.isGiftChest(block.getLocation())) {
-            storage.destroyGiftChest(block);
 
-            Player p = event.getPlayer();
-            p.sendMessage(ChatColor.YELLOW + "GiftChest wurde zerstört!");
+        if (!event.isCancelled()) {
+            if (storage.isGiftChest(block.getLocation())) {
+                storage.destroyGiftChest(block);
+
+                Player p = event.getPlayer();
+                p.sendMessage(ChatColor.YELLOW + "GiftChest wurde zerstört!");
+            }
         }
     }
 }
