@@ -95,7 +95,7 @@ public class PlayerInteractListener implements Listener {
         }
 
         if (!player.hasPermission("giftchest.use")) {
-            player.sendMessage(ChatColor.RED + "Dafür hast du keine Berechtigung!");
+            player.sendMessage(ChatColor.RED + "Du darfst die GiftChest nicht abbauen!");
             event.setCancelled(true);
             return;
         }
