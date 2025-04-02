@@ -1,5 +1,5 @@
 name: FTSGiftchest
-version: '1.0-SNAPSHOT'
+version: '1.0.1'
 main: com.ftscraft.ftsgiftchest.ftsgiftchest.FTSGiftchest
 api-version: '1.21'
 author: Melleming
